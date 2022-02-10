@@ -1,0 +1,27 @@
+<meta>
+    <info name="Simple Inventory" description="A simple inventory" version="1.0"/>
+
+    <!--<script src="lua/.lua" type="server/client"/>-->
+    <script src="lua/system.lua" type="server"/>
+    <script src="lua/use.lua" type="server"/>
+    <script src="lua/itens.lua" type="shared"/>
+
+    <export function="giveItem" type="server"/> 
+    <!-- giveItem
+    Essa função da a um jogador uma quantidade de item especificos.
+    SYNTAX: giveItem(player Player, int ITEM ID, int Ammount)
+    RETUNR: retorna true se o item foi dado com sucesso.
+    -->
+    <export function="takeItem" type="server"/> 
+    <!-- takeItem
+    Essa função tira de um jogador uma quantidade de item especificos.
+    SYNTAX: takeItem(player Player, int ITEM ID, int Ammount)
+    RETURN: retorna true se o item for tirado com sucesso.
+    -->
+    <export function="getItem" type="server"/>
+    <!-- getItem
+    Essa função verificar se o player tem o item.
+    SYNTAX: getItem(player Player, int ITEM ID)
+    RETURN: retorna uma tabela do item que está no invantário do jogador.
+    -->
+</meta>
